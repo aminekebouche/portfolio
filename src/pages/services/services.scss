@@ -1,0 +1,19 @@
+.services {
+    display: flex;
+    padding: 149.33px 85.33px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 106.667px;
+
+
+    
+
+    .services-container {
+        display: grid;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 42.6px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+   
+}

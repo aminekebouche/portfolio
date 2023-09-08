@@ -1,0 +1,105 @@
+.skills {
+    
+  
+    
+  
+    .skills-box {
+      display: flex;
+      gap: 80px;
+      justify-content: center;
+      padding: 8rem;
+  
+      .skills-box-right, .skills-box-left  {
+        width: 500px;
+
+        
+        h3 {
+          font-size: 1em;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 5px;
+          margin-bottom: 15px;
+          color: var(--darkblue);
+        }
+
+        .skill-content-left{
+            display: block;
+
+            .skill-item-left{
+                h4 {
+                    font-size: 0.8em;
+                    color: var(--primary);
+                    margin-bottom: 5px;
+
+                    span {
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 15px; 
+                        height: 15px;
+                        background-color: var(--darkblue); 
+                        border-radius: 50%;
+                        color: white; 
+                    }
+
+                }
+
+                p {
+                    padding-left: 15px;
+                    margin: 0;
+                    font-size: 0.6em;
+                    font-weight: bold;
+                    color: rgb(70, 70, 70);
+
+                }
+            }
+
+
+        }
+
+        .skills-code {
+
+            .skills-techno{
+                .progress-item {
+                    width: 100%;
+                    max-width: 400px; 
+                    margin: 10px 0;
+                    
+                    .progress-bar {
+                        width: 100%;
+                        height: 25px; 
+                        background-color: #e0e0e0; 
+                        border-radius: 4px;
+                        overflow: hidden; 
+                    
+                        .progress-fill {
+                            height: 100%;
+                            background-color: #3498db;
+                            border-radius: 4px 0 0 4px; 
+                            display: flex;
+                            align-items: center;
+                            padding: 0 10px; 
+                            color: white;
+                            font-weight: bold;
+                        
+                        p {
+                            margin: 0;
+                            font-size: 0.9em; 
+                        }
+                        }
+                    }
+                    }
+                    
+                    
+                    
+            }
+        }
+
+        
+
+
+
+
+      }
+    }
+  }
+  
