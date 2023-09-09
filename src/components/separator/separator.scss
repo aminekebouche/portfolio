@@ -1,0 +1,46 @@
+.separator {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 200px;
+    background-image: url("../../assets/sep.jpg");
+
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  
+    h1 {
+      color: white;
+      text-align: center;
+    }
+  
+    &-responsive-img {
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+  @media screen and (max-width:1000px) {
+        .separator {
+            background-image: none;
+            background-color: var(--darkblue);
+
+            
+
+            &-responsive-img {
+                position: absolute;
+                bottom: -50px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+        }
+  }
+
+
+
+
+  
