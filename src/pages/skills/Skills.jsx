@@ -61,24 +61,23 @@ function ProgressBar(techno) {
 
 const Skills = () => {
   return (
-    <div
-      className="skills"
-      id="skills"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(/images/bg.jpeg)",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "50%",
-      }}
-    >
+    <div className="skills" id="skills">
       <Separator />
       <div className="titles-page-box">
         <h1>mes compétences</h1>
         <h2>Des compétences à votre services</h2>
       </div>
 
-      <div className="skills-box">
+      <div
+        className="skills-box"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(/images/bg.jpeg)",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="skills-box-left">
           <h3>Domaines de compétences</h3>
           <div className="skill-content-left">

@@ -16,10 +16,13 @@ const Separator = () => {
         position: "relative",
       }}
     >
-      <h1 style={{ color: "white" }}>Développement Web Responsive</h1>
+      <h1 style={{ color: "white", textAlign: "center" }}>
+        Développement Web Responsive
+      </h1>
       <img
         src="/images/resp.png"
         alt=""
+        className="separator-responsive-img"
         style={{
           position: "absolute",
           bottom: "-100px",

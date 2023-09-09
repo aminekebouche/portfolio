@@ -94,12 +94,26 @@
             }
         }
 
-        
-
-
-
-
       }
     }
   }
-  
+
+  @media screen and (max-width:1000px) {
+    .skills {
+        .skills-box{
+            display: block;
+            padding: 2rem;
+            .skills-box-right, .skills-box-left  {
+                width: 100%;
+        }
+    }
+
+
+    
+  }
+
+
+  .separator-responsive-img{
+    width: 80%;
+  }
+}

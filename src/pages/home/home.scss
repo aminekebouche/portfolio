@@ -45,8 +45,42 @@
       }
 
     }
+  }
 
-    .home-right{
-     
+  @media only screen and (max-width: 1000px) {
+    .home{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .home-left {
+        gap: 0;
+
+        .home-hey{
+          font-size: 15px;
+          line-height: 0;
+  
+        }
+        
+        h1{
+          color: var(--heading-color);
+          font-size: 34px;
+          line-height: 50px;
+        }
+
+        p{
+          color: var(--darkblue);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 36px;
+        }
+      }
+
+      .home-right{
+        img {
+          width: 400px;
+        }
+      }
+
     }
   }

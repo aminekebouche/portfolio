@@ -1,76 +1,75 @@
-import React from "react";
-import { Link } from "react-scroll";
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import React, { useState, useEffect } from "react";
 import "./navbar.scss";
+import Menu from "../../components/menu/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
+  const [navActive, setNavActive] = useState(false);
+
+  const toggleMenu = () => {
+    setNavActive(!navActive);
+  };
+
+  const closeMenu = () => {
+    setNavActive(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 500) {
+        closeMenu();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1200) {
+      closeMenu();
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", closeMenu);
+
+    return () => {
+      window.removeEventListener("scroll", closeMenu);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${navActive ? "active" : ""}`}>
       <div className="navbar-left">
         <img src="\images\logo.png" alt="AK" />
       </div>
+      {}
       <div className="navbar-right">
-        <Link
-          to="home"
-          className="icon-home"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <HomeRoundedIcon />
-        </Link>
-        <Link
-          to="services"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          services
-        </Link>
-        <Link
-          to="skills"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          compétences
-        </Link>
-        <Link
-          to="portfolio"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          portflio
-        </Link>
-        <Link
-          to="about"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          à propos
-        </Link>
-        <Link
-          to="contact"
-          activeClass="active"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          contact
-        </Link>
+        <Menu />
+      </div>
+      <div className="navbar-menu">
+        {navActive ? (
+          <CloseIcon
+            style={{ color: "blue", fontSize: "2rem" }}
+            onClick={toggleMenu}
+          />
+        ) : (
+          <MenuIcon
+            style={{ color: "blue", fontSize: "2rem" }}
+            onClick={toggleMenu}
+          />
+        )}
+
+        {navActive && (
+          <div className="menu-container">
+            <Menu />
+          </div>
+        )}
       </div>
     </nav>
   );
