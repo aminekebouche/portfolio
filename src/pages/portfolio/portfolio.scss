@@ -1,0 +1,23 @@
+.portfolio{
+    padding: 149.33px 85.33px;
+
+    .portfolio-container-project{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8rem 0rem ;
+        flex-wrap: wrap;
+        
+    }
+
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .portfolio {
+        padding : 3rem 2rem;
+
+    }
+    
+}

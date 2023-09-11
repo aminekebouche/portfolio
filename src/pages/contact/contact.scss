@@ -1,0 +1,115 @@
+.contact {
+
+    .contact-box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap:4rem;
+        padding: 8rem 20rem;
+        flex-wrap: wrap;
+        .contact-cord{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap:20px;
+            .contact-cord-item{
+                height: 60px;
+                display: flex;
+                align-items:flex-start;
+                .icone{
+                    color: var(--darkblue);
+                    font-size: 20px;
+                    padding: 6px 16px;
+                }
+                div{
+                   border-bottom: 0.5px solid var(--darkblue);
+                   width: 100%;
+
+                    h1, p{
+                        font-size: small;
+                        color: var(--darkgray);
+
+                    }
+
+                    p{
+                        font-size: 10px;
+                    }
+                   
+
+                    
+                }
+               
+            }
+
+
+        }
+
+        .contact-form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+          
+            form {
+                
+          
+              .form-group {
+                margin-bottom: 1rem;
+          
+                label {
+                  display: block;
+                  margin-bottom: 0.5rem;
+                }
+          
+                input,
+                textarea {
+                  width: 100%;
+                  padding: 0.5rem;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+          
+                  &:focus {
+                    border-color: #007BFF;
+                    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+                  }
+                }
+          
+                textarea {
+                  resize: vertical;
+                }
+              }
+
+              button{
+                padding: 0.5rem 1rem;
+                font-size: smaller;
+
+                @media screen and (max-width: 1000px) {
+                    margin-left: 4rem;
+                }
+
+              }
+          
+              
+            }
+          }
+          
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .contact {
+
+        .contact-box{
+            padding: 8rem 5rem;
+
+            .contact-adress{
+                display: none;
+            }
+           
+        }
+    }
+
+    
+}
