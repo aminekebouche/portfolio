@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 import Menu from "../../components/menu/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-scroll";
+
 import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
@@ -45,10 +47,20 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
-      <div className="navbar-left">
-        <img src="\images\logo.png" alt="AK" />
-      </div>
-      {}
+      <Link
+        to="home"
+        className="icon-home"
+        activeClass="active"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={1000}
+      >
+        <div className="navbar-left">
+          <img src="\images\logo.png" alt="AK" />
+        </div>
+      </Link>
+
       <div className="navbar-right">
         <Menu />
       </div>
