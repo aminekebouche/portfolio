@@ -77,7 +77,28 @@
                 textarea {
                   resize: vertical;
                 }
-              }
+
+                .message {
+                  padding: 15px 0.5rem;
+                  
+                  border-radius: 5px;
+                  margin: 20px 0;
+                  width: 100%;
+                }
+
+                .error {
+                  border: 1px solid #D8000C;  /* Rouge */
+                  background-color: #FFBABA;  /* Rouge clair */
+                  color: #D8000C;  /* Rouge */
+                }
+                
+                .success {
+                  border: 1px solid #4CAF50;  /* Vert */
+                  background-color: #DFF2BF;  /* Vert clair */
+                  color: #4CAF50;  /* Vert */
+                }
+                
+            }
 
               button{
                 padding: 0.5rem 1rem;
@@ -88,6 +109,9 @@
                 }
 
               }
+
+              
+              
           
               
             }

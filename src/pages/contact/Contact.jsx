@@ -5,6 +5,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import Separator from "../../components/separator/Separator";
 import "./contact.scss";
+import validator from "validator";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -16,6 +17,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [message, setMessage] = useState(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -26,27 +29,38 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .send("myPortfolio", "template_avq0c4s", formData, "EiqIlKSUIg5wiDAYj")
-      .then(
-        (response) => {
-          console.log(
-            "Email sent successfully!",
-            response.status,
-            response.text
-          );
-        },
-        (error) => {
-          console.error("Failed to send email.", error);
-        }
-      );
-    setFormData({
-      name: "",
-      email: "",
-      tel: "",
-      subject: "",
-      message: "",
-    });
+    const hasEmptyValue = Object.values(formData).some((val) => val === "");
+    if (!hasEmptyValue || validator.isEmail(formData.email)) {
+      emailjs
+        .send("myPortfolio", "template_avq0c4s", formData, "EiqIlKSUIg5wiDAYj")
+        .then(
+          (response) => {
+            console.log(
+              "Email sent successfully!",
+              response.status,
+              response.text
+            );
+            setMessage({ text: "Email sent successfully!", status: "success" });
+            setFormData({
+              name: "",
+              email: "",
+              tel: "",
+              subject: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.error("Failed to send email.", error);
+            setMessage({
+              text: "Failed to send email! Please retry",
+              status: "error",
+            });
+          }
+        );
+    } else {
+      console.log("vide");
+      setMessage({ text: "Invalid form", status: "error" });
+    }
   };
   return (
     <div className="contact">
@@ -160,6 +174,13 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+            </div>
+            <div className="form-group">
+              {message && (
+                <div className={`message ${message.status}`}>
+                  {message.text}
+                </div>
+              )}
             </div>
             <button
               type="submit"
