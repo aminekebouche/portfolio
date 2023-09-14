@@ -3,12 +3,15 @@ import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailIcon from "@mui/icons-material/Mail";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
+import Separator from "../../components/separator/Separator";
 import "./contact.scss";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    tel: "",
     subject: "",
     message: "",
   });
@@ -23,17 +26,37 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici, vous pouvez envoyer les données à votre backend ou à un service comme SendGrid, Mailchimp, etc.
-    console.log(formData);
+    emailjs
+      .send("myPortfolio", "template_avq0c4s", formData, "EiqIlKSUIg5wiDAYj")
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+        },
+        (error) => {
+          console.error("Failed to send email.", error);
+        }
+      );
     setFormData({
       name: "",
       email: "",
+      tel: "",
       subject: "",
       message: "",
     });
   };
   return (
     <div className="contact">
+      <Separator
+        info={{
+          title:
+            "Rencontrons-nous et donnons vie à vos idées. Contactez-moi dès maintenant !",
+          img: "/images/con.png",
+        }}
+      />
       <div className="titles-page-box">
         <h1>contactez-moi</h1>
         <h2>Discuttons de vos idées</h2>
@@ -111,7 +134,7 @@ const Contact = () => {
                 id="tel"
                 name="tel"
                 placeholder="+33610942602"
-                value={formData.subject}
+                value={formData.tel}
                 onChange={handleChange}
                 required
               />
@@ -121,7 +144,7 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                placeholder="Demande de devis"
+                placeholder="Devis d'un site vitrine"
                 value={formData.subject}
                 onChange={handleChange}
                 required
@@ -138,7 +161,11 @@ const Contact = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={handleSubmit}
+            >
               Envoyer
             </button>
           </form>

@@ -1,26 +1,39 @@
 .services {
     display: flex;
-    padding: 149.33px 85.33px;
+    padding: 2rem 1rem; /* utilisant des unités relatives */
     flex-direction: column;
     justify-content: center;
-    gap: 106.667px;
-
-
+    gap: 2rem; /* encore, une unité relative */
+    
     .services-container {
-        display: flex;
+        display: grid;
         justify-content: center;
         align-items: flex-start;
-        gap: 42.6px;
-        grid-template-columns: repeat(4, 1fr);
-        flex-wrap: wrap;
+        gap: 1rem; /* unité relative */
+        grid-template-columns: 1fr; /* par défaut, une seule colonne pour mobile */
     }
-   
 }
 
-@media screen and (max-width:1000px) {
-
+/* Pour les tablettes (par exemple) */
+@media (min-width: 768px) {
     .services {
-        padding: 3rem 2rem;
+        padding: 5rem 3rem; 
+        
+        .services-container {
+            gap: 2rem; 
+            grid-template-columns: repeat(2, 1fr); /* deux colonnes pour les tablettes */
+        }
     }
-    
+}
+
+/* Pour les ordinateurs de bureau */
+@media (min-width: 1024px) {
+    .services {
+        padding: 149.33px 85.33px; /* Retour aux valeurs initiales pour les grands écrans */
+
+        .services-container {
+            gap: 42.6px; 
+            grid-template-columns: repeat(4, 1fr); /* quatre colonnes pour les ordinateurs de bureau */
+        }
+    }
 }

@@ -12,7 +12,7 @@ const Menu = () => {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={1000}
       >
         <HomeRoundedIcon />
       </Link>
@@ -22,7 +22,7 @@ const Menu = () => {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={1000}
       >
         services
       </Link>
@@ -32,7 +32,7 @@ const Menu = () => {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={1000}
       >
         compétences
       </Link>
@@ -42,7 +42,7 @@ const Menu = () => {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={1000}
       >
         portflio
       </Link>
@@ -52,7 +52,7 @@ const Menu = () => {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={1000}
       >
         à propos
       </Link>
@@ -62,7 +62,7 @@ const Menu = () => {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={500}
+        duration={1000}
       >
         contact
       </Link>

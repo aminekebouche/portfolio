@@ -1,51 +1,7 @@
 import React from "react";
 import "./skills.scss";
 import Separator from "../../components/separator/Separator";
-
-const comp = [
-  { name: "HTML5", level: 90 },
-  { name: "CSS3 / SCSS", level: 85 },
-  { name: "JavaScript (ES6+)", level: 80 },
-  { name: "JavaScript (ES6+)", level: 50 },
-];
-
-const contents = [
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.",
-  },
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.",
-  },
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.",
-  },
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.",
-  },
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.",
-  },
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile.",
-  },
-  {
-    title: "Gestion de projets web",
-    description:
-      "Site vitrine, corporate, évènementiel, e-commerce, intranet, application mobile évènementiel, e-commerce, intranet, application mobile.",
-  },
-];
+import { domaineComp, techComp, devopsComp } from "../../assets/data.js";
 
 function ProgressBar(techno) {
   return (
@@ -62,7 +18,9 @@ function ProgressBar(techno) {
 const Skills = () => {
   return (
     <div className="skills" id="skills">
-      <Separator />
+      <Separator
+        info={{ title: "Développement Web Responsive", img: "/images/rep.png" }}
+      />
       <div className="titles-page-box">
         <h1>mes compétences</h1>
         <h2>Des compétences à votre services</h2>
@@ -81,7 +39,7 @@ const Skills = () => {
         <div className="skills-box-left">
           <h3>Domaines de compétences</h3>
           <div className="skill-content-left">
-            {contents.map((con) => (
+            {domaineComp.map((con) => (
               <div className="skill-item-left">
                 <h4>
                   <span>{"+"}</span> {con.title}
@@ -96,7 +54,7 @@ const Skills = () => {
           <div className="skills-code">
             <h3>Compétences en développement</h3>
             <div className="skills-techno">
-              {comp.map((techno) => (
+              {techComp.map((techno) => (
                 <ProgressBar key={techno.name} {...techno} />
               ))}
             </div>
@@ -104,7 +62,7 @@ const Skills = () => {
           <div className="skills-code">
             <h3>Compétences en Devops</h3>
             <div className="skills-techno">
-              {comp.map((techno) => (
+              {devopsComp.map((techno) => (
                 <ProgressBar key={techno.name} {...techno} />
               ))}
             </div>

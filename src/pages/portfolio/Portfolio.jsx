@@ -1,30 +1,7 @@
 import React from "react";
 import "./portfolio.scss";
 import ProjectCard from "../../components/projectCard/ProjectCard";
-
-const projects = [
-  {
-    image: "/images/bg.jpeg",
-    title: "Dauphinder",
-    description: "Site de rencontre universitaie",
-  },
-  {
-    image: "/images/me.png",
-    title: "Portfolio Doudine smart data buisness",
-    description: "Site de rencontre universitaie",
-  },
-  {
-    image: "/images/bg.jpeg",
-    title: "Daphinder",
-    description: "Site de rencontre universitaie",
-  },
-  {
-    image: "/images/bg.jpeg",
-    title: "Daphinder",
-    description:
-      "Site de rencontre universitaie Site de  Site de rencontre  rencontre universitaie Site de  Site de rencontre universitaie Site de rencontrerencontre universitaie Site de rencontre  Site de rencontre universitaie Site de rencontre universitaie niversitaie Site de rencontre universitaie Site de rencontre universitaie",
-  },
-];
+import { projects } from "../../assets/data";
 
 const Portfolio = () => {
   return (
