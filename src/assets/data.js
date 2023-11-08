@@ -122,9 +122,9 @@ const domaineComp = [
       description: "Plateforme universitaire pour s'entraider, se ressourcer, se renconter",
     },
     {
-      image: "/images/bg.jpeg",
+      image: "/images/sdb.png",
       title: "Smart data buisness",
-      description: "Portfolio d'une entreprise spécialisée en Business Intelligence.",
+      description: "Site vitrine d'une entreprise spécialisée en Business Intelligence.",
     },
     {
       image: "/images/bg.jpeg",
@@ -132,63 +132,20 @@ const domaineComp = [
       description: "Plateforme de jeux de plateaux en ligne.",
     },
     {
-      image: "/images/bg.jpeg",
+      image: "/images/morpionLogin.png",
       title: "Morpion solitaire",
       description:
         "Jeu du morpion solitaire,Intelligence artificielle",
     },
     {
-      image: "/images/dauphinder.png",
-      title: "Dauphinder",
-      description: "Plateforme universitaire pour s'entraider, se ressourcer, se renconter",
+      image: "/images/gmi.png",
+      title: "Gonna Make It",
+      description: "GMI est un réseau social axé sur les produits qui permet aux concurrents, aux organisateurs et aux partenaires de distribution de gagner de l'argent grâce au volume de paris sur les événements qu'ils remportent, organisent ou contribuent à développer",
     },
     {
-      image: "/images/bg.jpeg",
-      title: "Smart data buisness",
-      description: "Portfolio d'une entreprise spécialisée en Business Intelligence.",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Assited Board Game",
-      description: "Plateforme de jeux de plateaux en ligne.",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Morpion solitaire",
-      description:
-        "Jeu du morpion solitaire,Intelligence artificielle",
-    },
-    {
-      image: "/images/dauphinder.png",
-      title: "Dauphinder",
-      description: "Plateforme universitaire pour s'entraider, se ressourcer, se renconter",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Smart data buisness",
-      description: "Portfolio d'une entreprise spécialisée en Business Intelligence.",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Assited Board Game",
-      description: "Plateforme de jeux de plateaux en ligne.",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Morpion solitaire",
-      description:
-        "Jeu du morpion solitaire,Intelligence artificielle",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Assited Board Game",
-      description: "Plateforme de jeux de plateaux en ligne.",
-    },
-    {
-      image: "/images/bg.jpeg",
-      title: "Morpion solitaire",
-      description:
-        "Jeu du morpion solitaire,Intelligence artificielle",
+      image: "/images/dashboard.png",
+      title: "Dashboard Admin",
+      description: "Un dashboard admin pour controler et l'alimenter mon portfolio ",
     },
   ];
 
